@@ -5,7 +5,8 @@
  */
 package Seguridad.Vista;
 
-
+import Seguridad.Controlador.clsBitacora;
+import Seguridad.Controlador.clsUsuarioConectado;
 import Seguridad.Controlador.clsMarcas;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
@@ -18,6 +19,7 @@ import javax.swing.JOptionPane;
  *
  * @author visitante
  */
+
 public class frmMarcas extends javax.swing.JInternalFrame {
 
     public void llenadoDeCombos() {
@@ -280,10 +282,15 @@ public class frmMarcas extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    int codigoAplicacion = 1001; 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
         //----------
+        int resultadoBitacora=0;
+        clsBitacora bitacoraRegistro = new clsBitacora();
+    
+        resultadoBitacora = bitacoraRegistro.setIngresarBitacora(clsUsuarioConectado.getIdUsuario(), codigoAplicacion, "DEL");
+        
         int registrosBorrados=0;
         clsMarcas marcas = new clsMarcas();
         marcas.setIdMarcas(Integer.parseInt(txtbuscado.getText()));
@@ -295,6 +302,12 @@ public class frmMarcas extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+        int resultadoBitacora=0;
+        clsBitacora bitacoraRegistro = new clsBitacora();
+    
+        resultadoBitacora = bitacoraRegistro.setIngresarBitacora(clsUsuarioConectado.getIdUsuario(), codigoAplicacion, "INS");
+        
+        
         clsMarcas marcas = new clsMarcas();
         marcas.setNombreMarcas(txtNombre.getText());
         marcas.setExistenciasMarcas(txtExistencias.getText());
@@ -308,6 +321,12 @@ public class frmMarcas extends javax.swing.JInternalFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
+        int resultadoBitacora=0;
+        clsBitacora bitacoraRegistro = new clsBitacora();
+    
+        resultadoBitacora = bitacoraRegistro.setIngresarBitacora(clsUsuarioConectado.getIdUsuario(), codigoAplicacion, "READ");
+        
+        
         clsMarcas marcas = new clsMarcas();
         //aplicacion.setNombreAplicacion(txtbuscado.getText());        
         marcas.setIdMarcas(Integer.parseInt(txtbuscado.getText()));        
@@ -320,6 +339,12 @@ public class frmMarcas extends javax.swing.JInternalFrame {
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
 //        // TODO add your handling code here:
+            int resultadoBitacora=0;
+        clsBitacora bitacoraRegistro = new clsBitacora();
+    
+        resultadoBitacora = bitacoraRegistro.setIngresarBitacora(clsUsuarioConectado.getIdUsuario(), codigoAplicacion, "UPD");
+
+
         clsMarcas marcas = new clsMarcas();
         marcas.setIdMarcas(Integer.parseInt(txtbuscado.getText()));
         marcas.setNombreMarcas(txtNombre.getText());
@@ -335,6 +360,12 @@ public class frmMarcas extends javax.swing.JInternalFrame {
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         limpiarTextos();
         habilitarBotones();
+        
+        int resultadoBitacora=0;
+        clsBitacora bitacoraRegistro = new clsBitacora();
+    
+        resultadoBitacora = bitacoraRegistro.setIngresarBitacora(clsUsuarioConectado.getIdUsuario(), codigoAplicacion, "DEL");
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLimpiarActionPerformed
     public void limpiarTextos()
