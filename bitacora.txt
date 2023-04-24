@@ -1,0 +1,29 @@
+commit 8481331c42e6a2038071a92da866a914fcb1acae
+Author: Victor Jerez <vjerezm@miumg.edu.gt>
+Date:   Mon Apr 24 14:02:27 2023 -0600
+
+    Se agregan funcionalidades de bitacora
+
+commit 6a90e8fc5b49a8923200439a3285a00003157596
+Author: Victor Jerez <vjerezm@miumg.edu.gt>
+Date:   Mon Apr 24 13:54:23 2023 -0600
+
+    Se agrega mantenimiento Marcas
+
+commit 7b75dda495c7b17eb65d83ac35112384e07c8498
+Author: Victor Jerez <vjerezm@miumg.edu.gt>
+Date:   Mon Apr 24 12:55:46 2023 -0600
+
+    Se agregan cambios al MDI
+
+commit f70e6e468124fd39e01a67cfe714b017aa89bde3
+Author: Victor Jerez <vjerezm@miumg.edu.gt>
+Date:   Mon Apr 24 12:33:05 2023 -0600
+
+    Se agrega programa base
+
+commit 8b4e5d02292392ea9dc5e2cdf44746725df8ac1b
+Author: VictorJJerezm <98106604+VictorJJerezm@users.noreply.github.com>
+Date:   Mon Apr 24 12:05:41 2023 -0600
+
+    Initial commit
